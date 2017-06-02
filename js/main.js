@@ -1,6 +1,7 @@
-import AlertNotification from './alertnotification';
+import Notification from './notification';
+import 'this';
 
-const notificationBar = new AlertNotification(".notification-bar");
+const notificationBar = new Notification(".notification-bar");
 let countClick = 0;
 
 notificationBar.showMessage("Welkom op deze pagina");
