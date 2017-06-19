@@ -1,3 +1,5 @@
+'use strict';
+
 // 1) waar gebruiken we het woord 'this' voor? Kijk ook goed naar mijn notification.js
 
 ///////
@@ -12,19 +14,23 @@ const student = {
 student.test(); // 2) waar verwijst 'this' naar? En waarom is dat zo?
 
 ///////
-/*
+
 const currentStudent = student.test; // 3) waar verwijst currentStudent naar?
 currentStudent(); // 4) waar verwijst 'this' naar? En waarom is dat zo?
-*/
+
 ///////
 
 // maak een div-je en zorg ervoor dat we erop kunnen klikken. Maak gebruik van een addEventListener en console.log als er geklikt wordt this
 // 5) waar verwijst deze 'this' naar? En waarom is dat zo?
 
+document.addEventListener('click', function(){
+    console.log(this);
+});
+
 ///////
-/*
-setTimeout(student.test, 2000); // 6) Als deze timeout afgaat: waar verwijst 'this' naar? En waarom is dat zo?
-*/
+
+window.setTimeout(student.test, 2000); // 6) Als deze timeout afgaat: waar verwijst 'this' naar?
+
 ///////
 /*
 const teacher = {
